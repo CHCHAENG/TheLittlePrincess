@@ -7,6 +7,7 @@ var num_10 = -1 ;
 var input;
 var result;
 var flag = 0;
+var stars =[];
 
 makeBinaryNum();
 changeBinaryToDecimal();
@@ -38,38 +39,26 @@ function changeBinaryToDecimal(){
 function checkAnswer(answer){
     // 값 맞는지 확인
    if (num_10 == answer){
-       alert("정답!");
+      window.location.href = 'yes.html';
    }else{
-       alert("오답!");
+      window.location.href = 'no.html';
    }
 }
 
 window.onload = function() {
-  init();
-  animate();
-
+  
   var btn = document.getElementsByClassName("btn")[0];
-
+  
   //html에서 버튼 클릭시 값 갖고와서 확인
   btn.addEventListener("click", function(){
-      var answer = document.getElementById("answer").value;
-      answer = parseInt(answer);
-      checkAnswer(answer);
+    var answer = document.getElementById("answer").value;
+    answer = parseInt(answer);
+    checkAnswer(answer);
   });
-
-  hlight = new THREE.AmbientLight (0x404040,50);
-	scene.add(hlight);
-	light = new THREE.DirectionalLight(0xc4c4c4,10);
-	light.position.set(0,3000,5000);
-	scene.add(light);
-
-	const loader = new THREE.GLTFLoader();
-	loader.load('./models/littlePrincess_2.glb', function(gltf){
-    console.log("GOOD");
-	  scene.add(gltf.scene);
-	}, undefined, function (error) {
-		console.error(error);
-	});
+  
+  init();
+  addSphere();
+  animate();
 }
 
 function init() {
@@ -98,16 +87,11 @@ function init() {
   planet.position.y = -180;
  
   var geom = new THREE.IcosahedronGeometry(15, 2);
-  // var mat = new THREE.MeshPhongMaterial({
-  //   color: 0xBD9779,
-  //   shading: THREE.FlatShading
-  // });
 
   var mat = createMaterial();
   var mesh = new THREE.Mesh(geom, mat);
   mesh.scale.x = mesh.scale.y = mesh.scale.z = 18;
   planet.add(mesh);
-
 
   var ambientLight = new THREE.AmbientLight(0xBD9779);
   scene.add(ambientLight);
@@ -116,6 +100,17 @@ function init() {
   directionalLight.position.set(1, 1, 1).normalize();
   scene.add(directionalLight);
 
+  const loader = new THREE.GLTFLoader();
+  loader.load('littlePrincess_2.glb', function(glb){
+    princess = glb.scene.children[0];
+    princess.scale.set(15,15,15);
+   princess.position.x = -60;
+   princess.position.y = 88;
+   princess.position.z = 170;
+    scene.add(glb.scene);
+  }, undefined, function (error) {
+     console.error(error);
+  });
 
   window.addEventListener('resize', onWindowResize, false);
 };
@@ -134,11 +129,59 @@ function createMaterial(){
   return bitMaterial;
 }
 
+
 function animate() {
   requestAnimationFrame(animate);
   planet.rotation.z += .002;
   planet.rotation.y = 0;
   planet.rotation.x = 0;
   renderer.clear();
+  
+  animateStars();
   renderer.render( scene, camera );
 };
+
+function addSphere(){
+
+  // The loop will move from z position of -1000 to z position 1000, adding a random particle at each position. 
+  for ( var x= -400; x < 400; x+=10 ) {
+
+    // Make a sphere (exactly the same as before). 
+    var geometry   = new THREE.SphereGeometry(0.5, 32, 32)
+    var material = new THREE.MeshBasicMaterial( {color: 0xffffff} );
+    var sphere = new THREE.Mesh(geometry, material)
+
+    // This time we give the sphere random x and y positions between -500 and 500
+    sphere.position.z = Math.random() * 1000 - 500;
+    sphere.position.y = Math.random() * 1000 - 500;
+
+    // Then set the z position to where it is in the loop (distance of camera)
+    sphere.position.x = x;
+
+    // scale it up a bit
+    sphere.scale.x = sphere.scale.y = 4;
+
+    //add the sphere to the scene
+    scene.add( sphere );
+
+    //finally push it to the stars array 
+    stars.push(sphere); 
+  }
+}
+
+function animateStars() { 
+  
+  // loop through each star
+  for(var i=0; i<stars.length; i++) {
+
+  star = stars[i]; 
+    
+  // and move it forward dependent on the mouseY position. 
+  star.position.x -=  i/30;
+    
+  // if the particle is too close move it to the back
+  if(star.position.x<-400) star.position.x+=800; 
+
+  }
+
+}

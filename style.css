@@ -1,9 +1,21 @@
 
 body {
   width:100%;
-  background-image: url("bitBack.jpg");
+  background-image: url("background.webp");
+  overflow: hidden;
+
+
+  justify-content: center;
+  align-items: center;
 }
 
+#webgl-canvas {
+  background: radial-gradient(
+    circle farthest-corner at center top,
+    #071021,
+    #19324a
+  );
+}
 canvas {
   display: block;
 }
@@ -53,7 +65,7 @@ h1 {
   text-align: center;
   top: 350px;
   width : 30%;
-  margin-left: 35%;
+  margin-left: 37%;
 }
 
 .input {
@@ -67,7 +79,7 @@ h1 {
 	background-repeat: no-repeat;
   background-position: 10px center;
   background-color: rgba(206, 206, 206, 0.877);
-  background-image: url("https://cdn-icons-png.flaticon.com/512/8356/8356640.png");
+  background-image: url("input.png");
   background-size: 65px;
   
 }
@@ -90,3 +102,4 @@ h1 {
     transition: 0.3s;
     font-size:25px;
 }
+
