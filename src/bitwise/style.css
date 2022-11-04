@@ -1,0 +1,105 @@
+
+body {
+  width:100%;
+  background-image: url("background.webp");
+  overflow: hidden;
+
+
+  justify-content: center;
+  align-items: center;
+}
+
+#webgl-canvas {
+  background: radial-gradient(
+    circle farthest-corner at center top,
+    #071021,
+    #19324a
+  );
+}
+canvas {
+  display: block;
+}
+
+div {
+  position: absolute;
+  margin: 0px;
+  padding: 0;
+  width: 100%;
+}
+
+h1 {
+  text-align: center;
+  color: rgb(255, 255, 255);
+  position: absolute;
+  width: 100%;
+  margin-top: 100px;
+}
+
+.problem{
+  font-size: 80px;
+  text-align:center;
+  color :rgb(191, 194, 4);
+  text-shadow: 5px 5px #16345A, 8px 8px #284D8E, 11px 11px #458cc7;
+  margin-top :35px;
+}
+
+.p {
+  font-size: 50px;
+  text-align:center;
+  color :aliceblue;
+  text-shadow: 5px 5px #16345A, 8px 8px #284D8E;
+  margin-top :60px;
+}
+
+.qu {
+  color:rgb(206, 252, 0);
+  letter-spacing: 10px;
+  position: absolute;
+  width: 100%;
+  font-size: 60px;
+  text-shadow: 5px 5px #16345A;
+  margin-top: 230px;
+}
+
+.ans {
+  text-align: center;
+  top: 350px;
+  width : 30%;
+  margin-left: 37%;
+}
+
+.input {
+  text-align: center;
+  width: 50%;
+  height: 80px;
+	box-sizing: border-box;
+	border: solid 4px #0b3075;
+	border-radius: 17px;
+	font-size: 35px;
+	background-repeat: no-repeat;
+  background-position: 10px center;
+  background-color: rgba(206, 206, 206, 0.877);
+  background-image: url("input.png");
+  background-size: 65px;
+  
+}
+
+.w-btn-neon2 {
+    position: relative;
+    border: none;
+    min-width: 200px;
+    min-height: 50px;
+    background: linear-gradient(
+        90deg,
+        rgba(191, 194, 4, 0.849) 0%,
+        rgb(176, 179, 5) 100%
+    );
+    border-radius: 1000px;
+    color: rgb(21, 31, 31);
+    cursor: pointer;
+    box-shadow: 12px 12px 24px rgb(78, 77, 8);
+    font-weight: 700;
+    transition: 0.3s;
+    font-size:25px;
+}
+
