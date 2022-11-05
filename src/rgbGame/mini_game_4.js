@@ -2,6 +2,7 @@ var rand_color
 var rand_color_1
 
 var renderer, scene, camera, composer, planet, mixer, clock;
+var stars = [];
 
 const score = 0;
 
@@ -177,9 +178,55 @@ window.onload = function init()
     var delta = clock.getDelta();
     if(mixer) mixer.update(delta);
 
-  
+    animateStars();
     renderer.render( scene, camera );
   };
+
+  function addSphere(){
+
+    // The loop will move from z position of -1000 to z position 1000, adding a random particle at each position. 
+    for ( var x= -400; x < 400; x+=10 ) {
+  
+      // Make a sphere (exactly the same as before). 
+      var geometry   = new THREE.SphereGeometry(0.5, 32, 32)
+      var material = new THREE.MeshBasicMaterial( {color: 0xffffff} );
+      var sphere = new THREE.Mesh(geometry, material)
+  
+      // This time we give the sphere random x and y positions between -500 and 500
+      sphere.position.z = Math.random() * 1000 - 500;
+      sphere.position.y = Math.random() * 1000 - 500;
+  
+      // Then set the z position to where it is in the loop (distance of camera)
+      sphere.position.x = x;
+  
+      // scale it up a bit
+      sphere.scale.x = sphere.scale.y = 4;
+  
+      //add the sphere to the scene
+      scene.add( sphere );
+  
+      //finally push it to the stars array 
+      stars.push(sphere); 
+    }
+  }
+  
+  function animateStars() { 
+    
+  // loop through each star
+  for(var i=0; i<stars.length; i++) {
+  
+  star = stars[i]; 
+    
+  // and move it forward dependent on the mouseY position. 
+  star.position.x -=  i/10;
+    
+  // if the particle is too close move it to the back
+  if(star.position.x<-400) star.position.x+=800; 
+  
+  }
+  
+  }
+  
 
 
 
@@ -253,6 +300,7 @@ window.onload = function init()
   requestAnimationFrame(render);	
   renderer.render(scene, camera);
 
+  addSphere();
   animate();
 
   rayCast = new THREE.Raycaster();
