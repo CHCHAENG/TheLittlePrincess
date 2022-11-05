@@ -4,7 +4,7 @@ import { EffectComposer } from '//unpkg.com/three@0.124.0/examples/jsm/postproce
 import { RenderPass } from '//unpkg.com/three@0.124.0/examples/jsm/postprocessing/RenderPass'
 import { UnrealBloomPass } from '//unpkg.com/three@0.124.0/examples/jsm/postprocessing/UnrealBloomPass'
 import { Curves } from '//unpkg.com/three@0.124.0/examples/jsm/curves/CurveExtras'
-// ---- boot
+// boot
 
 const renderer = new $.WebGLRenderer({});
 const scene = new $.Scene();
@@ -19,17 +19,17 @@ window.addEventListener('resize', () => {
 document.body.prepend(renderer.domElement);
 window.dispatchEvent(new Event('resize'));
 
-// ---- setup
+// setup
 
 scene.fog = new $.FogExp2('black', 0.05);
 scene.add(new $.HemisphereLight('cyan', 'orange', 2));
 
-// ---- const
+// const
 
 const mpms = (20) / 1e3;
 const steps = 2000;
 
-// ---- mesh
+// mesh
 
 const shape = new $.Shape();
 // cw
@@ -77,34 +77,34 @@ const matTop = new $.MeshLambertMaterial({ color: 'black' });
 const mesh = new $.Mesh(extrudeGeom, [matTop, matSideWall]);
 scene.add(mesh);
 
-// ---- composer
+// composer
 
 const composer = new EffectComposer(renderer);
 composer.addPass(new RenderPass(scene, camera));
 composer.addPass(new UnrealBloomPass(new $.Vector2(), 2, 0.5, 0.7));
 
-// ---- anim
+// anim
 
 const totalLen = extrudePath.getLength();
 const { binormals } = extrudePath.computeFrenetFrames(steps);
 const $m = new $.Matrix4(); // rotation matrix
 
-renderer.setAnimationLoop((t /*ms*/) => {
+renderer.setAnimationLoop((t) => {
     const $u = ((mpms * t) % totalLen) / totalLen;
     // update cam position
     extrudePath.getPointAt($u, camera.position);
     // update cam rotation
     camera.setRotationFromMatrix($m.lookAt(
-        /* eye */ camera.position,
-        /* target */ extrudePath.getPointAt(Math.min(1.0, $u + 0.01)),
-        /* up */ binormals[$u * steps | 0]
+        camera.position, //eye
+        extrudePath.getPointAt(Math.min(1.0, $u + 0.01)), // target
+        binormals[$u * steps | 0] //up
     ));
     renderer.getDrawingBufferSize(composer.passes[1].resolution);
     composer.render();
     mesh.material[1].uniforms.t.value = t;
 });
 
-// ---- sidewall material
+// sidewall material
 
 function f() {
     const url = 'https://images.unsplash.com/photo-1550747528-cdb45925b3f7?ixid=MXwxMjA3fDB8MHxzZWFyY2h8Mnx8dW5pY29ybnxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60';

@@ -4,6 +4,8 @@ var group,shapes = [];
 init();
 
 function init() {
+
+  // set camera and scene
   container = document.createElement('div');
   document.body.appendChild(container);
   scene = new THREE.Scene();
@@ -11,6 +13,7 @@ function init() {
   camera.position.set(0, 150, 500);
   scene.add(camera);
 
+  // add light
   var light = new THREE.DirectionalLight(0x9955ff, 2);
   light.position.x = -500;
   light.position.y = 500;
@@ -22,8 +25,10 @@ function init() {
   light.position.z = -150;
   camera.add(light);
 
+  // background color
   scene.background = new THREE.Color('#993355');
 
+  // heart shape
   var x = -25,y = -250;
   var heartShape = new THREE.Shape();
   heartShape.moveTo(x + 25, y + 25);
@@ -43,6 +48,7 @@ function init() {
     }
   }
 
+  // total rendering
   renderer = new THREE.WebGLRenderer({ antialias: true });
   renderer.setPixelRatio(window.devicePixelRatio);
   renderer.setSize(window.innerWidth, window.innerHeight);
@@ -52,6 +58,7 @@ function init() {
 
 }
 
+// shape
 function addShape(shape, extrudeSettings, color, x, y, z, rx, ry, rz, s) {
   var geometry = new THREE.ExtrudeGeometry(shape, extrudeSettings);
   var mesh = new THREE.Mesh(geometry, new THREE.MeshPhongMaterial({ color: color }));
@@ -62,6 +69,7 @@ function addShape(shape, extrudeSettings, color, x, y, z, rx, ry, rz, s) {
   scene.add(mesh);
 }
 
+// animation
 function animate() {
   var speed = 0.05;
   shapes.forEach(el => {
@@ -71,6 +79,7 @@ function animate() {
   });
 }
 
+// rendering
 function render() {
   requestAnimationFrame(render);
   animate();

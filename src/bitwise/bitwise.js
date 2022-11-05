@@ -14,20 +14,18 @@ changeBinaryToDecimal();
 
 function makeBinaryNum(){
 
-    // 4bit 2진수 랜덤으로 숫자 생성
+  // make binary random number (4bit)
     var i = 4;
     while (i > 0){
         const num = Math.round(Math.random());
         num_2 = num_2 + num.toString();
         i--;
     }
-
-    //html에 표시할 변수에 저장
     num_2_2 = num_2;
 }
 
 function changeBinaryToDecimal(){
-    // 10진수로 바꾸기
+    // change decimal number
     if(num_2 == "0000") {
         num_10= parseInt(0);
     }
@@ -37,7 +35,7 @@ function changeBinaryToDecimal(){
 }
 
 function checkAnswer(answer){
-    // 값 맞는지 확인
+    // check answer
    if (num_10 == answer){
       window.location.href = '../yes.html';
    }else{
@@ -49,7 +47,7 @@ window.onload = function() {
   
   var btn = document.getElementsByClassName("btn")[0];
   
-  //html에서 버튼 클릭시 값 갖고와서 확인
+  // get input answer number and check
   btn.addEventListener("click", function(){
     var answer = document.getElementById("answer").value;
     answer = parseInt(answer);
@@ -72,6 +70,7 @@ function init() {
   renderer.setClearColor(0x00000, 0.0);
   document.getElementById('canvas').appendChild(renderer.domElement);
 
+  // add scene and camera
   scene = new THREE.Scene();
   scene.fog = new THREE.Fog(0xA6CDFB, 1, 1000);
 
@@ -81,6 +80,7 @@ function init() {
   camera.position.y = 100;
   scene.add(camera);
 
+  // planet
   planet = new THREE.Object3D();
   scene.add(planet);
 
@@ -93,6 +93,7 @@ function init() {
   mesh.scale.x = mesh.scale.y = mesh.scale.z = 18;
   planet.add(mesh);
 
+  // add light
   var ambientLight = new THREE.AmbientLight(0xBD9779);
   scene.add(ambientLight);
 
@@ -102,6 +103,7 @@ function init() {
 
   clock = new THREE.Clock();
 
+  // load littleprincess model
   const loader = new THREE.GLTFLoader();
   loader.load('../models/littlePrincess_2.glb', function(glb){
     princess = glb.scene.children[0];
