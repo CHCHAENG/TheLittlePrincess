@@ -1,7 +1,7 @@
 var rand_color
 var rand_color_1
 
-var renderer, scene, camera, composer, planet;
+var renderer, scene, camera, composer, planet, mixer, clock;
 
 const score = 0;
 
@@ -53,6 +53,8 @@ window.onload = function init()
   directionalLight.position.set(1, 1, 1).normalize();
   scene.add(directionalLight);
 
+  clock = new THREE.Clock();
+
   const loader = new THREE.GLTFLoader();
   loader.load('../models/littlePrincess_2.glb', function(glb){
     princess = glb.scene.children[0];
@@ -60,6 +62,11 @@ window.onload = function init()
     princess.position.x = 50;
     princess.position.y = -30;
     princess.position.z = -90;
+
+    mixer = new THREE.AnimationMixer(glb.scene);
+    var action = mixer.clipAction(glb.animations[0]);
+    action.play();
+
     scene.add(glb.scene)
   }, undefined, function (error) {
      console.error(error);
@@ -166,6 +173,10 @@ window.onload = function init()
     planet.rotation.y = 0;
     planet.rotation.x = 0;
     renderer.clear();
+
+    var delta = clock.getDelta();
+    if(mixer) mixer.update(delta);
+
   
     renderer.render( scene, camera );
   };
