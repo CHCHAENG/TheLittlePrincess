@@ -60,10 +60,11 @@
 ![rgb_tunnel](https://user-images.githubusercontent.com/96913056/200161607-c6f90a86-bae3-405d-9524-284643b43cd2.gif)<br><br>
 
 ## Github Repository
-[MP_TermProject Team C](https://github.com/parksubin1313/MPTermProject)
+[LittlePrincess_Graphice_TeamE](https://github.com/CHCHAENG/TheLittlePrincess)
 
-## Little Princess (PPT)
-[Frigge.pptx](https://github.com/parksubin1313/MPTermProject/files/8889503/Frigge.pptx)
+## Little Princess (Pdf)
+[LittlePrincess.pdf]([LittlePrincess_teamE.pdf](https://github.com/CHCHAENG/TheLittlePrincess/files/9945419/LittlePrincess_teamE.pdf)
+)
 
 ## Demo Video
 [Little Princess Demo](https://www.youtube.com/watch?v=s_ZaZghIvp0)
