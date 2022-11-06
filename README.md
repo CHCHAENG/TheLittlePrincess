@@ -1,2 +1,2 @@
-# ⭐ **The Little Princess ⭐
-2022 Computer Graphics TermProject
+# ⭐ **The Little Princess** ⭐
+**_2022 Computer Graphics TermProject Team E_**<br><br>
