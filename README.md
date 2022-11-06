@@ -26,3 +26,10 @@
   - If you visit other planets except B612 that tells you where to start, you can play mini-games that exist on each planet.<br>
   - Mini-game is a game designed to fit the concept of a planet.<br>
   - You can play a bitwise computational game on the planet Bitwise, a keyboard rudder game on the planet Mirrorball, and a different color search game on the planet Gradient.<br>
+
+## Key Features
+- Blender 3d models are placed on a 2d plane for a unique look.<br>
+- In order to arouse the player's interest, clues that can infer the story are placed throughout the map to induce users to proceed by guessing what happened between the two and why the rose boy left.<br>
+
+![uptoSphere](https://user-images.githubusercontent.com/96913056/200160669-7208266b-b7cf-4233-b2ee-e70a6d09600a.gif)
+![move](https://user-images.githubusercontent.com/96913056/200160675-c5ddb456-e427-4ede-b53e-db895a6463db.gif)
