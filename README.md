@@ -16,20 +16,15 @@
  And a young princess who discovered it travels to various planets and finds a rose boy. <br><br>
  
  - **Introduction to the Planet**<br>
+
+|Value|Meaning|
 |-----|---|
 |*B612 planet*| ![KakaoTalk_20221106_165135146_03](https://user-images.githubusercontent.com/96913056/200160094-6f507445-5f0c-4d4b-adfc-b2bfec79d766.png)
+|*Bitwise planet*| ![KakaoTalk_20221106_165135146_02](https://user-images.githubusercontent.com/96913056/200160097-8048bf9f-6713-470b-bf3f-645de4f72cfc.png)
+|*Mirrorball planet*| ![KakaoTalk_20221106_165135146_01](https://user-images.githubusercontent.com/96913056/200160104-4ade416b-a52b-4819-a8cc-1113dffb2351.png)
+|*Gradient planet*| ![KakaoTalk_20221106_165135146](https://user-images.githubusercontent.com/96913056/200160109-de980fbf-e45d-405f-bef1-72d490bed551.png)
 
-B612 planet <br>
-![KakaoTalk_20221106_165135146_03](https://user-images.githubusercontent.com/96913056/200160094-6f507445-5f0c-4d4b-adfc-b2bfec79d766.png)<br>
 
-Bitwise planet<br>
-![KakaoTalk_20221106_165135146_02](https://user-images.githubusercontent.com/96913056/200160097-8048bf9f-6713-470b-bf3f-645de4f72cfc.png)<br>
-
-Mirrorball planet<br>
-![KakaoTalk_20221106_165135146_01](https://user-images.githubusercontent.com/96913056/200160104-4ade416b-a52b-4819-a8cc-1113dffb2351.png)<br>
-
-Gradient planet<br>
-![KakaoTalk_20221106_165135146](https://user-images.githubusercontent.com/96913056/200160109-de980fbf-e45d-405f-bef1-72d490bed551.png)<br>
 
   - If you visit other planets except B612 that tells you where to start, you can play mini-games that exist on each planet.<br>
   - Mini-game is a game designed to fit the concept of a planet.<br>
