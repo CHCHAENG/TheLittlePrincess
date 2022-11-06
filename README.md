@@ -59,4 +59,11 @@
 ![keyboard_tunnel](https://user-images.githubusercontent.com/96913056/200161606-b4d96b82-3014-4537-b0f3-cc717b708dc0.gif)<br>
 ![rgb_tunnel](https://user-images.githubusercontent.com/96913056/200161607-c6f90a86-bae3-405d-9524-284643b43cd2.gif)<br><br>
 
+## Github Repository
+[MP_TermProject Team C](https://github.com/parksubin1313/MPTermProject)
 
+## Little Princess (PPT)
+[Frigge.pptx](https://github.com/parksubin1313/MPTermProject/files/8889503/Frigge.pptx)
+
+## Demo Video
+[Little Princess Demo](https://www.youtube.com/watch?v=s_ZaZghIvp0)
