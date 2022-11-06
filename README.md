@@ -15,13 +15,13 @@
  But one day, a rose boy leaves the planet with only a diary.<br>
  And a young princess who discovered it travels to various planets and finds a rose boy. <br><br>
  
- 
- - **Introduction to the Planet** dfdfdfd<br>
-  - B612 planet<br>
-  - 
  - **Introduction to the Planet**<br>
-  - 333
-  - B612 planet 
-  - Bitwise planet
-  - Mirrorball planet
-  - Gradient planet
+
+B612 planet 
+Bitwise planet
+Mirrorball planet
+Gradient planet
+
+  - If you visit other planets except B612 that tells you where to start, you can play mini-games that exist on each planet.<br>
+  - Mini-game is a game designed to fit the concept of a planet.<br>
+  - You can play a bitwise computational game on the planet Bitwise, a keyboard rudder game on the planet Mirrorball, and a different color search game on the planet Gradient.<br>
