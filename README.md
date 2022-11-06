@@ -63,8 +63,7 @@
 [LittlePrincess_Graphice_TeamE](https://github.com/CHCHAENG/TheLittlePrincess)
 
 ## Little Princess (Pdf)
-[LittlePrincess.pdf]([LittlePrincess_teamE.pdf](https://github.com/CHCHAENG/TheLittlePrincess/files/9945419/LittlePrincess_teamE.pdf)
-)
+[LittlePrincess_teamE.pdf](https://github.com/CHCHAENG/TheLittlePrincess/files/9945419/LittlePrincess_teamE.pdf)
 
 ## Demo Video
 [Little Princess Demo](https://www.youtube.com/watch?v=s_ZaZghIvp0)
