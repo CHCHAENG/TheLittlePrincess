@@ -11,4 +11,5 @@
 
 ## Brief description
 * Hommage the existing _"Little Prince"_ novel and reinterpreted it with a new story called _"Little Prince"_.<br><br>
-  * The story of a young princess and a rose boy happily lived on the existing B612 planet, but one day, a rose boy leaves the planet with only a diary, 
+  * The story of a young princess and a rose boy happily lived on the existing B612 planet. <br>
+ But one day, a rose boy leaves the planet with only a diary, and a young princess who discovered it travels to various planets and finds a rose boy. <br>
