@@ -17,6 +17,10 @@
  
  - **Introduction to the Planet**<br>
 
+|Planet| |
+|-----|---|
+|*B612 planet*| ![KakaoTalk_20221106_165135146_03](https://user-images.githubusercontent.com/96913056/200160094-6f507445-5f0c-4d4b-adfc-b2bfec79d766.png)
+
 B612 planet <br>
 ![KakaoTalk_20221106_165135146_03](https://user-images.githubusercontent.com/96913056/200160094-6f507445-5f0c-4d4b-adfc-b2bfec79d766.png)<br>
 
