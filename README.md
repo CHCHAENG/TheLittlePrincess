@@ -1,6 +1,7 @@
 # ⭐ **The Little Princess** ⭐
-**2022 Computer Graphics TermProject Team E**<br><br>
 ![Logo_P](https://user-images.githubusercontent.com/96913056/200159252-8bb3c856-6298-4f31-9d42-e80818206d54.png)
+
+**2022 Computer Graphics TermProject Team E**<br><br>
 
 ### Information
 * Gachon University Software Department 201935010 김가은 dkrk333@gachon.ac.kr <br>
