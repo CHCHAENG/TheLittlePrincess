@@ -9,7 +9,7 @@
 - Gachon University Software Department 201935142 최  선 sun4194@gachon.ac.kr <br>
 <br>
 
-## Brief description
+## Description
 - **Hommage** the existing _"Little Prince"_ novel and reinterpreted it with a new story called _"Little Prince"_.<br>
   - The story of a little princess and a rose boy happily lived on the existing B612 planet. <br>
  But one day, a rose boy leaves the planet with only a diary.<br>
@@ -33,22 +33,21 @@
 ![move](https://user-images.githubusercontent.com/96913056/200160675-c5ddb456-e427-4ede-b53e-db895a6463db.gif)<br><br>
 
 ### Mini game Planet
+- Each planet has its own concept.<br>
+- Users can enjoy the game by preparing a game that fits the concept.<br>
+- On the map, when the player approaches each planet, it moves to the mini-game page of the planet.<br><br>
+
 ![그림4](https://user-images.githubusercontent.com/96913056/200161426-a7f42d44-9898-468e-a728-90b6ab2beee6.gif)<br>
 ![그림2](https://user-images.githubusercontent.com/96913056/200161429-8ab31603-7058-446a-a850-df9052694f23.gif)<br>
 ![그림3](https://user-images.githubusercontent.com/96913056/200161430-f98938f5-3fb6-4e1b-ba84-d611e64b2e03.gif)
 <br><br>
 
-## Key Features
+## Implementation
 - Blender 3d models are placed on a 2d plane for a unique look.<br>
 - In order to arouse the player's interest, clues that can infer the story are placed throughout the map to induce users to proceed by guessing what happened between the two and why the rose boy left.<br>
 
 
-- Each planet has its own concept.<br>
-- Users can enjoy the game by preparing a game that fits the concept.<br>
-- On the map, when the player approaches each planet, it moves to the mini-game page of the planet.<br>
 
-사진 넣기
+
 <br><br>
-
-## Implementation Detail
 
