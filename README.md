@@ -46,7 +46,7 @@
 
 ### Blender
 - 3d models are placed on a 2d plane for a unique look.<br>
-- Implementation of 3D models
+- Implementation of 3D models<br>
 ![princess1](https://user-images.githubusercontent.com/96913056/200161562-d90a83af-1232-4490-9a7a-bc912430c88f.gif)
 ![princess2](https://user-images.githubusercontent.com/96913056/200161566-4a72203f-f1d0-48ac-99e7-7d67d7d12523.gif)
 <br>
