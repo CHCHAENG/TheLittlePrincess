@@ -41,6 +41,8 @@ window.onload = function init()
   //   color: 0xBD9779,
   //   shading: THREE.FlatShading
   // });
+
+  // planet
   var mat = createMaterial();
 
   var mesh = new THREE.Mesh(geom, mat);
@@ -56,6 +58,7 @@ window.onload = function init()
 
   clock = new THREE.Clock();
 
+  // princess (character)
   const loader = new THREE.GLTFLoader();
   loader.load('../models/littlePrincess_2.glb', function(glb){
     princess = glb.scene.children[0];
@@ -92,11 +95,13 @@ window.onload = function init()
       scene.add(light);
     }
 
+    // make cube (0.6 x 0.6 x 0.6)
   const boxWidth = 0.6;
   const boxHeight = 0.6;
   const boxDepth = 0.6;
   const geometry = new THREE.BoxGeometry(boxWidth, boxHeight, boxDepth);
 
+  // 9 cubes -> cube[9]
   function makeInstance(geometry, color, x, y) {
     const material = new THREE.MeshPhongMaterial({color});
 
@@ -109,14 +114,18 @@ window.onload = function init()
     return cube;
   }
 
+  // make random color
   randomColor();
 
+  // rand_color : normal color
+  // rand_color_1 : special color (unique)
   const random_array = {rand_color, rand_color_1};
   console.log(random_array);
 
   answer_cube = Math.floor(Math.random()*8);
   console.log(answer_cube);
 
+  // cube (x,y)
   const x = [-1.0, 0.0, 1.0, -1.0, 0.0, 1.0, -1.0, 0.0, 1.0];
   const y = [0.9, 0.9, 0.9, 0.0, 0.0, 0.0, -0.9, -0.9, -0.9,];
   const cubes = [];
@@ -132,6 +141,7 @@ window.onload = function init()
 
   }
 
+  // cube rotation
   function render(time) {
     time *= 0.001;  // convert time to seconds
 
@@ -147,6 +157,7 @@ window.onload = function init()
     requestAnimationFrame(render);
   }
 
+  // random color (unique color is -0.2 per r,g,b)
   function randomColor() {
     var r = Math.random();
     var g = Math.random();
