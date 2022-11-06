@@ -15,7 +15,7 @@
  But one day, a rose boy leaves the planet with only a diary.<br>
  And a young princess who discovered it travels to various planets and finds a rose boy. <br><br>
  
- - **Introduction to the Planet** <br>
+ - **Introduction to the Planet** . <br>
   - B612 planet 
   - Bitwise planet
   - Mirrorball planet
