@@ -51,7 +51,7 @@ const seaPlanetTexture = textureLoader.load('/images/seaPlanet.png');
 const rosePointTexture = textureLoader.load('/images/rosePoint.png')
 
 const ending1Texture = textureLoader.load('/images/ending_1.png');
-const ending2Texture = textureLoader.load('/images/ending_2.png');
+//const ending2Texture = textureLoader.load('/images/ending_2.png');
 const ending3Texture = textureLoader.load('/images/ending_3.png');
 const ending4Texture = textureLoader.load('/images/ending_4.png');
 const sadRoseTexture = textureLoader.load('/images/sadRoseBoy.png');
@@ -103,10 +103,10 @@ directionalLight.position.y = directionalLightOriginPosition.y;
 directionalLight.position.z = directionalLightOriginPosition.z;
 directionalLight.castShadow = true;
 
-// mapSize 세팅으로 그림자 퀄리티 설정
+//그림자 퀄리티 설정
 directionalLight.shadow.mapSize.width = 2048;
 directionalLight.shadow.mapSize.height = 2048;
-// 그림자 범위
+//그림자 범위
 directionalLight.shadow.camera.left = -100;
 directionalLight.shadow.camera.right = 100;
 directionalLight.shadow.camera.top = 100;
@@ -115,7 +115,7 @@ directionalLight.shadow.camera.near = -100;
 directionalLight.shadow.camera.far = 100;
 scene.add(directionalLight);
 
-// Mesh
+//배경 Mesh
 const meshes = [];
 const spaceMesh = new THREE.Mesh(
 	new THREE.PlaneGeometry(150, 150),
@@ -128,9 +128,6 @@ spaceMesh.rotation.x = -Math.PI/2;
 spaceMesh.receiveShadow = true;
 scene.add(spaceMesh);
 meshes.push(spaceMesh);
-
-
-
 
 //start Message
 const leaveMesh = new THREE.Mesh(
@@ -210,7 +207,7 @@ const graDiaryMesh = new THREE.Mesh(
 	})
 );
 graDiaryMesh.name = 'gradationDiary';
-graDiaryMesh.position.set(30, 0.005, 10)
+graDiaryMesh.position.set(33, 0.005, 10)
 graDiaryMesh.rotation.x = -Math.PI/2;
 graDiaryMesh.receiveShadow = true;
 scene.add(graDiaryMesh);
@@ -404,7 +401,7 @@ const mirrorMesh = new THREE.Mesh(
 		,transparent: true, opacity: 0.9, color: '00ff0000'
 	})
 );
-mirrorMesh.position.set(17, 0.005, 0);
+mirrorMesh.position.set(15, 0.005, 0);
 mirrorMesh.rotation.x = -Math.PI/2;
 mirrorMesh.receiveShadow = true;
 scene.add(mirrorMesh);
@@ -448,7 +445,7 @@ const mirror = new Mirror({
 	gltfLoader,
 	scene,
 	modelSrc: '/models/mirror9.glb',
-	x: 17,
+	x: 15,
 	y: -1.0,
 	z: -3
 });
@@ -502,7 +499,7 @@ function draw() {
 			princess.actions[0].stop();
 			princess.actions[1].play();
 			
-			if (
+			if (//일정거리 이상 가까워지면 
 				Math.abs(destination.x - princess.modelMesh.position.x) < 0.03 &&
 				Math.abs(destination.z - princess.modelMesh.position.z) < 0.03
 			) {
@@ -515,7 +512,7 @@ function draw() {
 			) {
 				if (!b612.visible) {
 					b612.visible = true;
-					gsap.to(
+					gsap.to(//gsap 애니메이션으로 행성 나오게
 						b612.modelMesh.position,
 						{
 							duration: 1,
@@ -556,8 +553,8 @@ function draw() {
 				Math.abs(bitMesh.position.x - princess.modelMesh.position.x) < 1.5 &&
 				Math.abs(bitMesh.position.z - princess.modelMesh.position.z) < 1.5
 			) {
-
-				window.location.href = "http://127.0.0.1:5500/src/bitwise/tunnel_bit.html";
+				//3초 기다리고 행성 사이트 오픈
+				setTimeout(()=>window.location.href = "http://127.0.0.1:5500/src/bitwise/tunnel_bit.html",3000);
 				if (!bit.visible) {
 					bit.visible = true;
 					gsap.to(
@@ -576,6 +573,7 @@ function draw() {
 						}
 					);
 				}
+				
 			} else if (bit.visible) {
 				bit.visible = false;
 				gsap.to(
@@ -600,7 +598,7 @@ function draw() {
 				Math.abs(mirrorMesh.position.x - princess.modelMesh.position.x) < 1.5 &&
 				Math.abs(mirrorMesh.position.z - princess.modelMesh.position.z) < 1.5
 			) {
-				window.location.href = "http://127.0.0.1:5500/src/mirrorballGame/tunnel_keyboard.html"
+				setTimeout(()=>window.location.href = "http://127.0.0.1:5500/src/mirrorballGame/tunnel_keyboard.html",3000);
 				if (!mirror.visible) {
 					mirror.visible = true;
 					gsap.to(
@@ -644,7 +642,7 @@ function draw() {
 				Math.abs(gradationMesh.position.z - princess.modelMesh.position.z) < 1.5
 			) {
 
-				window.location.href = 'http://127.0.0.1:5500/src/rgbGame/tunnel_rgb.html'
+				setTimeout(()=>window.location.href = "http://127.0.0.1:5500/src/rgbGame/tunnel_rgb.html",3000);
 				if (!gradation.visible) {
 					gradation.visible = true;
 					gsap.to(
