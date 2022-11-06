@@ -18,10 +18,10 @@
  - **Introduction to the Planet**<br>
 |Planet| |
 |-----|---|
-|*B612 planet*| ![KakaoTalk_20221106_165135146_03](https://user-images.githubusercontent.com/96913056/200160094-6f507445-5f0c-4d4b-adfc-b2bfec79d766.png){: width="100" height="100"}
-|*Bitwise planet*| ![KakaoTalk_20221106_165135146_02](https://user-images.githubusercontent.com/96913056/200160097-8048bf9f-6713-470b-bf3f-645de4f72cfc.png){: width="100" height="100"}
-|*Mirrorball planet*| ![KakaoTalk_20221106_165135146_01](https://user-images.githubusercontent.com/96913056/200160104-4ade416b-a52b-4819-a8cc-1113dffb2351.png){: width="100" height="100"}
-|*Gradient planet*| ![KakaoTalk_20221106_165135146](https://user-images.githubusercontent.com/96913056/200160109-de980fbf-e45d-405f-bef1-72d490bed551.png){: width="100" height="100"}
+|*B612 planet*| ![KakaoTalk_20221106_165135146_03](https://user-images.githubusercontent.com/96913056/200160094-6f507445-5f0c-4d4b-adfc-b2bfec79d766.png)
+|*Bitwise planet*| ![KakaoTalk_20221106_165135146_02](https://user-images.githubusercontent.com/96913056/200160097-8048bf9f-6713-470b-bf3f-645de4f72cfc.png)
+|*Mirrorball planet*| ![KakaoTalk_20221106_165135146_01](https://user-images.githubusercontent.com/96913056/200160104-4ade416b-a52b-4819-a8cc-1113dffb2351.png)
+|*Gradient planet*| ![KakaoTalk_20221106_165135146](https://user-images.githubusercontent.com/96913056/200160394-834fbb56-34c9-42c2-9fd3-6f22d1aeb3d2.png)
 
 
   - If you visit other planets except B612 that tells you where to start, you can play mini-games that exist on each planet.<br>
