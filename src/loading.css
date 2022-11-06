@@ -3,6 +3,7 @@ html, body {
   height: 100%;
   width: 100%;
   background: #122139;
+  /* add background */
   background-image: url("night.jpg");
   overflow: hidden;
 
