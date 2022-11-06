@@ -33,8 +33,8 @@
 ![move](https://user-images.githubusercontent.com/96913056/200160675-c5ddb456-e427-4ede-b53e-db895a6463db.gif)<br><br>
 
 ### Mini game Planet
-![그림4](https://user-images.githubusercontent.com/96913056/200161426-a7f42d44-9898-468e-a728-90b6ab2beee6.gif)
-![그림2](https://user-images.githubusercontent.com/96913056/200161429-8ab31603-7058-446a-a850-df9052694f23.gif)
+![그림4](https://user-images.githubusercontent.com/96913056/200161426-a7f42d44-9898-468e-a728-90b6ab2beee6.gif)<br>
+![그림2](https://user-images.githubusercontent.com/96913056/200161429-8ab31603-7058-446a-a850-df9052694f23.gif)<br>
 ![그림3](https://user-images.githubusercontent.com/96913056/200161430-f98938f5-3fb6-4e1b-ba84-d611e64b2e03.gif)
 <br><br>
 
