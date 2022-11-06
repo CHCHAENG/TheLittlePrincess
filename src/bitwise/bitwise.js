@@ -195,7 +195,5 @@ function animateStars() {
     
   // if the particle is too close move it to the back
   if(star.position.x<-400) star.position.x+=800; 
-
   }
-
 }
